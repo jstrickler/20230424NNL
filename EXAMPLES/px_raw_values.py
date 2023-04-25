@@ -3,8 +3,9 @@ import openpyxl as px
 def main():
     wb = px.load_workbook('../DATA/presidents.xlsx')
     ws = wb['US Presidents']  # get active sheet
-    headers = next(ws.values)   # read first row from generator
-    for row in ws.values:  # loop over rows in generator
+    values = ws.values
+    next(values)
+    for row in values:  # loop over rows in generator
         print(row[:5])   # print first 5 elements of row tuple
 
 

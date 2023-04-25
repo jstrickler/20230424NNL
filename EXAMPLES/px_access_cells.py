@@ -7,6 +7,7 @@ def main():
     # access cell by cell name
     print(ws['A1'].value)
     print(ws['C2'].value, ws['B2'].value)
+    print(ws["z100"].value)
     print()
 
     # same, but lower-case

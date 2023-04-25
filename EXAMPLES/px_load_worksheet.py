@@ -8,7 +8,7 @@ def main():
     # 1
     print(wb.sheetnames, '\n')
     ws = wb['US Presidents']
-    print(ws, '\n')
+    print(ws, ws.title, '\n')
 
     # 2
     for ws in wb:
@@ -20,6 +20,7 @@ def main():
     print(ws, '\n')
 
     print(ws['B2'].value)
+    print(ws['B2'])
 
 
 if __name__ == '__main__':

@@ -32,10 +32,11 @@ data = {  # dictionary of arbitrary data
     'spam': [1, 2, 3],
     'ham': ('a', 'b', 'c'),
     'toast': date(2014, 8, 1),
+#    'jam': {"alpha", "bravo", "charlie"},
     'parrots': parrots,
 }
 
 # convert Python data to JSON data;
 # 'default' parameter specifies function for custom encoding;
 # 'indent' parameter says to indent and add newlines for readability
-print(json.dumps(data, default=encode, indent=4))
+print(json.dumps(data, default=encode), indent=4)
