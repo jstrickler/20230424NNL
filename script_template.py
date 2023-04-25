@@ -5,6 +5,7 @@ import sys
 
 # other imports  (standard library, standard non-library, local)
 
+MAX_VALUE = 42
 # constants (AKA global variables -- keep these to a minimum)
 
 # main function

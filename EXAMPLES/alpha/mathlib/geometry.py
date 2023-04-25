@@ -11,6 +11,13 @@ import math   # load math.py
 
 PI = math.pi
 
+def main():
+    """
+    Program entry point
+    """
+    print(circle_area(25))
+    print(rectangle_area(14.9, 23.7))
+
 def circle_area(diameter):
     """
     Compute the area of a circle from a given diameter
@@ -39,3 +46,6 @@ def square_area(side):
     :return: Area of square
     """
     return side ** 2
+
+if __name__ == "__main__":
+    main()
