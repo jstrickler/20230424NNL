@@ -1,0 +1,11 @@
+# coding: utf-8
+get_ipython().run_line_magic('history', '')
+get_ipython().run_line_magic('history', '-g ~1')
+get_ipython().run_line_magic('history', '-g ~2')
+get_ipython().run_line_magic('history', '-g ~/2')
+get_ipython().run_line_magic('history', '~/1-10')
+get_ipython().run_line_magic('history', '-n ~/1-10')
+get_ipython().run_line_magic('history', '-n ~1/1-10')
+get_ipython().run_line_magic('history', '-g ~1/1-10')
+get_ipython().run_line_magic('history', '-n ~1/1-10')
+()
