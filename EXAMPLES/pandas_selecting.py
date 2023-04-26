@@ -1,7 +1,7 @@
 import pandas as pd
 from printheader import print_header
 
-cols = ['alpha', 'beta', 'gamma', 'delta', 'epsilon']  # column labels
+cols = ['alpha', 'beta', 'gamma', 'delta', 'phi']  # column labels
 index = ['a', 'b', 'c', 'd', 'e', 'f']  # row labels
 
 values = [  # sample data
@@ -26,10 +26,11 @@ print(df.beta, '\n')  # same, but alternate syntax (only works if column name is
 print_header("df['b':'e']")
 print(df['b':'e'], '\n')  # select rows 'b' through 'e' using slice of row labels
 
-print_header("df[['alpha','epsilon','beta']]")
-print(df[['alpha', 'epsilon', 'beta']])  # select columns -- note index is an iterable
+print_header("df[['alpha','phi','beta']]")
+print(df[['alpha', 'phi', 'beta']])  # select columns -- note index is an iterable
 print()
 
-print_header("df[['alpha','epsilon','beta']]['b':'e']")
-print(df[['alpha', 'epsilon', 'beta']]['b':'e'])  # select columns AND slice rows
+print_header("df[['alpha','phi','beta']]['b':'e']")
+print(df[['alpha', 'phi', 'beta']]['b':'e'])  # select columns AND slice rows
 print()
+print(df.filter(regex="ph[ai]"))

@@ -17,6 +17,7 @@ DEFAULT_VALUE = -1  # Define default value
 
 print("Version 1: looping over arrays")
 start = time.perf_counter() # Get the current time as Unix timestamp (large float)
+# DO NOT DO IT THIS WAY!!!!
 try:
     version1_array = np.zeros(sample_data.shape, dtype=int)  # Create array to hold results
     for i, row in enumerate(sample_data):  # Iterate over rows and columns of input array
@@ -49,6 +50,7 @@ finally:
     print()
 
 print("Version 3: broadcast with vectorize()")
+# DO IT THIS WAY!!!!
 set_default_vect = np.vectorize(set_default)  # Convert function to vectorized version -- creates function that takes one parameter and has the other two "embedded" in it
 
 start = time.perf_counter()

@@ -1,4 +1,6 @@
 import numpy as np
+import sys
+print(sys.version_info)
 
 sample_data = np.loadtxt(   # Load data from space-delimited file
     "../DATA/columns_of_numbers.txt",

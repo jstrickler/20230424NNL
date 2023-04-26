@@ -14,6 +14,8 @@ print("s1:", s1, "\n")
 print("s2:", s2, "\n")
 
 print("selecting elements")
+print(f"s1['f']: {s1['f']}")
+
 print(s1[['h', 'b']], "\n")  # select items from series
 
 print(s1[['a', 'b', 'c']], "\n")  # select items from series

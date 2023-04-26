@@ -20,3 +20,5 @@ print()
 print('a[::2] =>', a[::2])  # every second row
 print()
 print('a[:3, -2:] =>', a[:3, -2:])  # every third element of every second row
+a[:3, -2:] *= 1000
+print(f"a: {a}")

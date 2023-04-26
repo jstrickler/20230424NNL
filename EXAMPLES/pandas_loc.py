@@ -47,3 +47,6 @@ print(df.loc[:, ['gamma', 'alpha', 'epsilon']], "\n")
 
 print_header("df.loc[['b', 'e', 'a'], ['gamma', 'alpha', 'epsilon']]")  # iterables of rows and columns
 print(df.loc[['b', 'e', 'a'], ['gamma', 'alpha', 'epsilon']], "\n")
+
+print(df.where(df == 420))
+

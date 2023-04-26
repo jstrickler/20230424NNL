@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-data = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [20, 30, 40]]
+data = [[1.0, 2, 3], [4, 5, 6], [7, 8, 9], [20, 30, 40]]
 
 a = np.array(data)  # create array from nested sequences
 print(a, '\n')
@@ -13,7 +13,7 @@ print("a.nbytes (number of bytes used):", a.nbytes)
 print("sys.getsizeof(data):", sys.getsizeof(data))
 print()
 
-a_zeros = np.zeros((3, 5), dtype=np.uint32)  # create array of specified shape and datatype, initialized to zeroes
+a_zeros = np.zeros((3, 5), dtype=np.uint16)  # create array of specified shape and datatype, initialized to zeroes
 print(a_zeros)
 print()
 
@@ -27,6 +27,6 @@ print(a_empty)
 
 print(a.dtype)  # defaults to float64
 
-nan_array = np.full((5, 10), np.NaN)  # create array of NaN values
+nan_array = np.full((5, 10), 42)  # create array of NaN values
 print(nan_array)
 

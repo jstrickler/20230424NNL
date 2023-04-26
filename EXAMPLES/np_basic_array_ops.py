@@ -23,7 +23,8 @@ print(b)
 print()
 
 print("a * 10")
-print(a * 10)  # multiply every element by 10 (not in place)
+result = a * 10
+print(result)  # multiply every element by 10 (not in place)
 print()
 
 print("a + b")
