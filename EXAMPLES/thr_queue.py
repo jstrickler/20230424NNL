@@ -33,7 +33,7 @@ class Worker(Thread):  # worker thread
         while True:
             try:
                 s1 = word_queue.get(block=False)  # get next item from thread
-                s2 = s1.upper() + '-' + s1.upper()
+                s2 = s1.upper()
                 with shared_list_lock:  # acquire lock, then release when done
                     shared_list.append(s2)
 

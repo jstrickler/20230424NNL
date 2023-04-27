@@ -15,19 +15,19 @@ SEARCH_TERMS = [  # terms to search for; each thread will search some of these t
     'business', 'frog', 'muntin', 'automobile',
     'green', 'connect','vial', 'battery', 'computer',
     'sing', 'park', 'ladle', 'ram', 'dog', 'scalpel',
-    'emulsion', 'noodle', 'combo', 'battery'
+    'emulsion', 'noodle', 'combo', 'battery', 'thermonuclear',
 ]
 def main():
     for function in get_data_threaded, get_data_serial:
         start_time = time.perf_counter()
         results = function()
+        total_time = time.perf_counter() - start_time
         for search_term, result in zip(SEARCH_TERMS, results):  # iterate over results, mapping them to search terms
             print("{}:".format(search_term.upper()), end=" ")
             if result:
                 print(result)
             else:
                 print("** no results **")
-        total_time = time.perf_counter() - start_time
         print("{} took {:.2f} seconds\n".format(function.__name__, total_time))
 
 def fetch_data(term):  # function invoked by each thread for each item in list passed to map()

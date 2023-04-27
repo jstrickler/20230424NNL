@@ -15,8 +15,15 @@ class SimpleThread(Thread):
         with STDOUT_LOCK:
             print("Hello from thread {}".format(self._threadnum))
 
+thread_list = []
 
 for i in range(16):
     t = SimpleThread(i)  # create the thread
     t.start()  # launch the thread
+    thread_list.append(t)
 
+print(f"thread_list: {thread_list}")
+for t in thread_list:
+    t.join()  # wait for thread to finish
+
+print("All threads are finished")
