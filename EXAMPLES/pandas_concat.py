@@ -19,4 +19,9 @@ print(df_rows, '\n')
 df_columns = pd.concat([df1, df2], axis=1)
 print("df_columns")
 print(df_columns)
+df_columns.columns = "a b c d e f".split()
+print(df_columns)
+df_columns.index = "alpha bravo charlie delta echo".split()
+print(df_columns)
+
 
