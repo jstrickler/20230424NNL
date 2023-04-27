@@ -1,4 +1,8 @@
 import scipy as sp
+from scipy.linalg import convolution_matrix
+
+
+# use convolution_matrix ...
 
 p1 = sp.poly1d([2, 1, 4])  # 2,1,4 are coefficients
 print(p1, '\n')
