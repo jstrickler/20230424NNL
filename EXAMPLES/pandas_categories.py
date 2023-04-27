@@ -6,6 +6,8 @@ from printheader import print_header
 salaries = pd.read_csv(
     "../DATA/city-of-chicago-salaries.csv"
 )
+print(salaries.describe(include="O"))
+
 
 print_header("BASIC DATAFRAME (FIRST 5 ROWS)")
 print(salaries.head())
@@ -15,6 +17,7 @@ print(salaries['Department'].value_counts(), '\n')
 
 print_header("WITHOUT CATEGORIES")
 print(salaries.memory_usage(deep=True))
+print(salaries.info(memory_usage="deep"))
 print()
 
 salaries = pd.read_csv(
@@ -23,4 +26,6 @@ salaries = pd.read_csv(
 )
 print_header("WITH CATEGORIES")
 print(salaries.memory_usage(deep=True))
+print(salaries.info(memory_usage="deep"))
 print() 
+

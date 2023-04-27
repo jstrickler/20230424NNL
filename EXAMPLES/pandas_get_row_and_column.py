@@ -19,6 +19,10 @@ print(f"df.where(df == 4).stack():\n{df.where(df == 4).stack()}\n")
 
 print(f"df.where(df == 4).stack()index:\n{df.where(df == 4).stack().index}\n")
 
-print(f"list(df.where(df == 4).stack().index):\n{list(df.where(df == 4).stack().index)}\n")
+print(f"list(df.where(df >= 4).stack().index):\n{list(df.where(df >= 4).stack().index)}\n")
 
 
+df = pd.DataFrame([['alpha', 'bravo', 'charlie'],['delta', 'echo', 'foxtrot'], ['golf', 'hotel', 'india']])
+print(f"df:\n{df}\n")
+
+print(f"list(df.where(df == 'hotel').stack().index):\n{list(df.where(df == 'hotelgi').stack().index)}\n")
