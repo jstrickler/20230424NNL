@@ -12,3 +12,6 @@ with h5.File(HDF5_FILE, "w") as hdf5_file:
     del numbers_data
     print(ds)
     print(ds[:])
+    print(f"ds.shape: {ds.shape}")
+    print(f"ds.ndim: {ds.ndim}")
+    

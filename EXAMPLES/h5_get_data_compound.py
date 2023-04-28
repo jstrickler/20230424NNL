@@ -22,6 +22,8 @@ with h5.File(HDF5_FILE) as hdf5_file:  # open file
     
     print("list(ds[0]): {}".format(list(ds[0])))
     print(f"type(ds[0]): {type(ds[0])}")
+    print(f"ds[0][()]: {ds[0][()]}")
+    
     
     max1 = ds['max'].astype(np.float16)
     print(f"max1: {max1}")
